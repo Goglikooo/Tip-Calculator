@@ -1,38 +1,425 @@
-.App {
-  text-align: center;
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #c6e5e1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box{
+    width: 80vw;
+    height: 60vh;
+    background: #ffffff;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.data{
+    height: 100%;
+    width: 50%;
+    /* background-color: rgb(213, 26, 26); */
+    border-radius: 15px;
+    /* background-color: rgb(220, 10, 10); */
+    font-size: 1rem;
+    padding-left: 40px;
+    padding-right:40px;
+    box-sizing: border-box;
+    /* display: none; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display-box {
+    height: 100%;
+    width: 50%;
+    border-radius: 15px;
+    background-color:  #00474B;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
 }
 
-.App-link {
-  color: #61dafb;
+/* .display{
+    height: 80%;
+    width: 50%;
+    border-radius: 15px;
+    background-color:  #00474B;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+} */
+
+.data-font{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #5E7A7D;
+    
+    /* display: none; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-font-error{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: right;
+    color: #E17457;
+    
+}
+
+.input-field{
+    height: 6vh;
+    width: 100%;
+    border-radius: 5px;
+    background: #F3F9FA;
+    border: 2px solid #26C2AE;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2vw;
+    line-height: 1vw;
+    padding-right: 1vw;
+    /* identical to box height */
+    box-sizing: border-box;
+    text-align: right;
+
+    color: #00474B;
+
+    
+}
+
+.input-field::-webkit-outer-spin-button,
+.input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.button-custom::-webkit-outer-spin-button,
+.button-custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} 
+
+
+
+.bill{
+    position: relative;
+}
+
+.number-of-people{
+    position: relative;
+    margin-top: 10px;
+    /* background-color: red; */
+    /* display: none; */
+    
+}
+
+.dolarIcon{
+    position: absolute;
+    top: 277px;
+    padding-left: 10px;
+    display: none;
+}
+
+.person-icon{
+    position: absolute;
+    top: 70px;
+    padding-left: 10px;
+    display: none;
+}
+
+.tip-percentage{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    box-sizing: border-box;
+    width: 100%;
+    /* background-color: #26C2AE; */
+    /* display: none; */
+}
+
+
+.button-custom{
+    height: 5vh;
+    width: 7vw;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1vw;
+    /* identical to box height */
+    color:  #00474B;
+    text-align: center;
+    border: 1px solid #26C2AE;
+}
+
+.people-number{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vw;
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(176, 36, 36); */
+    box-sizing: border-box;
+    /* display: none; */
+}
+
+.right-results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vw;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tip-amount-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+    width: 100%;
+    /* background-color: rgb(176, 36, 36); */
+    box-sizing: border-box;
+    /* display: none; */
+}
+.tip-person-h{
+    margin-bottom: 0;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+.tip-person{
+    margin-top: 0;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #7F9D9F;
+}
+
+.total-person-result{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #26C2AE;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 10rem;
+}
+
+.total-person-result-min{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #26C2AE;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 10rem;
+}
+.tip-amount-result{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #26C2AE;
+    margin: 5px;
+}
+
+.tip-amount-result-min{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #26C2AE;
+    margin: 5px;
+}
+
+
+.reset-button{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    height: 48px;
+    width: 100%;
+    text-align: center;
+    color: #00474B;
+    background: #26C2AE;
+    border-radius: 5px;
+    border: none;
+    /* display: none; */
+}
+
+.reset-button:hover{
+    background: #9FE8DF;
+    cursor: pointer;
+}
+
+@media (max-width: 940px) {
+    html {
+        font-size: 13px;
+    }
+    .data-font{
+        font-size: 0.9rem;
+    }
+    
+    .data-font-error{
+        font-size: 0.9rem;
+    }
+
+    .button-custom{
+        font-size: 1rem;
+        font-weight: 600;
+        height: 4vh;
+        width: 6vw;
+    }
+    .data{
+        height: 100%;
+        width: 50%;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding-left: 40px;
+        padding-right:40px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-field{
+        height: 5vh;
+        font-size: 0.7rem;
+    }
+
+
+    .display-box {
+        height: 50%;
+        width: 50%;
+        border-radius: 15px;
+        background-color:  #00474B;
+        padding: 40px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .box{
+        width: 90vw;
+        height: auto;
+
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+    .box {
+        flex-direction: column;
+        gap: 1vw;
+        width: 100%;
+
+    }
+    .data{
+        height: 100%;
+        width: 100%;
+    }
+
+    .display-box {
+        height: 50%;
+        width: 90%;
+
+        
+    }
+    .tip-person-h{
+        font-weight: 700;
+        font-size: 0.7rem;
+    }
+    
+    .tip-person{
+        font-size: 0.6rem;
+    }
+
+    .tip-percentage{
+        font-size: 2rem;
+    }
+    .button-custom{
+        font-size: 0.7rem;
+        font-weight: 600;
+        height: 3vh;
+        width: 4vw;
+        font-weight: 500;
+    }
+
+    .data-font-error{
+        font-size: 0.5rem;
+    }
+    .data-font{
+        font-size: 0.5rem;
+    }
+
+    .input-field{
+        height: 3vh;
+        font-size: 0.7rem;
+    }
+
+    .reset-button{
+        font-weight: 600;
+        font-size: 0.8rem;
+        height: 4vh;
+    }
 }

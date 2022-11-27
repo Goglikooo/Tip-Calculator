@@ -1,0 +1,73 @@
+.buttonFixed{
+    height: 5vh;
+    width: 8vw;
+    border-radius: 5px;
+    background: #00474B;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1vw;
+    /* identical to box height */
+    box-sizing: border-box;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
+
+.buttonFixed:hover {
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
+
+.buttonFixedClicked {
+    height: 5vh;
+    width: 8vw;
+    border-radius: 5px;
+    background: #00474B;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1vw;
+    text-align: center;
+    border: none;
+    background: #26C2AE;
+    color: #00474B;
+
+}
+
+@media (max-width: 940px) {
+    .buttonFixed{
+        font-size: 1rem;
+        font-weight: 600;
+        height: 5vh;
+        width: 6vw;
+    }
+    
+    .buttonFixedClicked {
+        font-size: 1rem;
+        font-weight: 600;
+        height: 5vh;
+        width: 6vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttonFixed{
+        font-size: 0.7rem;
+        font-weight: 600;
+        height: 3vh;
+        width: 5vw;
+        font-weight: 500;
+    }
+
+    .buttonFixedClicked {
+        font-size: 0.7rem;
+        font-weight: 600;
+        height: 3vh;
+        width: 4vw;
+        font-weight: 500;
+    }
+}
